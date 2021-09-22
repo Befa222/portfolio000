@@ -6,16 +6,15 @@
   --clr-BG-dark: rgb(39, 39, 39);
   --clr-BG-light: silver;
   --clr-accents: rgb(218, 141, 0);
-  --clr-text-main: white;
-  --clr-text-secondary: rgb(151, 151, 151);
 }
 
 body {
-  width: 100vw;
+  min-height: 100vh;
   overflow-x: hidden;
   margin: 0.5em;
   padding: 0;
-  background-color: var(--clr-BG-dark)
+  font-family: Montserrat-Reg;
+  background-color: var(--clr-BG-dark);
 }
 
 h1, h2, h3, h4, a {
@@ -24,4 +23,8 @@ h1, h2, h3, h4, a {
 }
 img{
   max-width: 100%;
+}
+@font-face {
+  font-family: Montserrat-Reg;
+  src: url(./fonts/MontserratAlternates-Regular.ttf);
 }
