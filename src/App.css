@@ -1,0 +1,37 @@
+.header{
+    height: 90vh;
+}
+.logo{
+    color: var(--clr-accents);
+}
+.first-name, .last-name{
+    color: var(--clr-accents);
+    position: absolute;
+    font-size: clamp(3rem, 10vw, 7rem);
+}
+.first-name{
+    top: 20%;
+    left: 10%;
+}
+.last-name{
+    top:27%;
+    left: 10%;
+}
+.title{
+    position: absolute;
+    top: 36%;
+    left: 10%;
+    text-align: center;
+    color: var(--clr-text-secondary);
+    font-size: clamp(1.5rem, 5vw, 4rem)
+}
+.circle1-header{
+    position: absolute;
+    top: 10vh;
+    left: 50vw;
+    width: 120vw;
+    height: 120vw;
+    border-radius: 50%;
+    border: 0.1em solid var(--clr-BG-light);
+    z-index: -1;
+}

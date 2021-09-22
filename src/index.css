@@ -3,20 +3,25 @@
 }
 
 :root {
-  --clr-BG: rgb(54, 54, 54);
-  --clr-accents: rgb(255, 171, 15);
-  --clr-font: white;
+  --clr-BG-dark: rgb(39, 39, 39);
+  --clr-BG-light: silver;
+  --clr-accents: rgb(218, 141, 0);
+  --clr-text-main: white;
+  --clr-text-secondary: rgb(151, 151, 151);
 }
 
 body {
   width: 100vw;
-  min-height: 100vh;
-  margin: 0;
+  overflow-x: hidden;
+  margin: 0.5em;
   padding: 0;
-  background-color: var(--clr-BG)
+  background-color: var(--clr-BG-dark)
 }
 
 h1, h2, h3, h4, a {
   margin: 0;
   padding: 0;
+}
+img{
+  max-width: 100%;
 }
