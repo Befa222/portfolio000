@@ -17,13 +17,26 @@ body {
   background-color: var(--clr-BG-dark);
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+li{
+  padding-top: 0.7em;
+  text-align: start;
+}
+
 h1, h2, h3, h4, a {
   margin: 0;
   padding: 0;
 }
-img{
+a{
+  color: var(--clr-accents)
+}
+img {
   max-width: 100%;
 }
+
 @font-face {
   font-family: Montserrat-Reg;
   src: url(./fonts/MontserratAlternates-Regular.ttf);

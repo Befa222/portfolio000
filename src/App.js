@@ -1,7 +1,17 @@
+import { useState } from 'react';
 import './App.css';
 import portfolio3d from './images/3dport.png'
+import pickachew1 from './images/pikaMobile1.png'
+import weather1 from './images/weather1.png'
+import universe from './images/wildUniverse.png'
 
 function App() {
+
+  const [project1Details, setProject1Details] = useState(false)
+  const [project2Details, setProject2Details] = useState(false)
+  const [project3Details, setProject3Details] = useState(false)
+  const [project4Details, setProject4Details] = useState(false)
+
 
   return (
     <>
@@ -34,14 +44,73 @@ function App() {
           <h3 className='projects-section-title2'>Click on the name for details</h3>
           <div className='number-container'>
             <h2 className='number'>01</h2>
-            <h2 className='project-title'>3d Portfolio</h2>
+            <h2 onClick={() => setProject1Details(!project1Details)} className='project-title'>3d Portfolio</h2>
           </div>
-          <div className='img1-container'>
-            <img src={portfolio3d} />
+          {project1Details &&
+            <div className='projectDetails'>
+              <ul>
+                <li>A version of my portfolio using imported 3d models.</li>
+                <li>It was a lot of fun and sweat, but a definitely a good training.</li>
+                <li>TECH: React, react router, Three JS, hooks, CSS.</li>
+                <li>DEPLOY LINK: <a target='_blank'rel="noreferrer" href='https://fabien-lallement-3d-portfolio.netlify.app/'>3d Portfolio</a> </li>
+              </ul>
+            </div>
+          }
+          <div className='img-landscape'>
+            <img className='portfolio3d' src={portfolio3d} alt='Star-Wars-portfolio' />
           </div>
           <div className='number-container'>
             <h2 className='number'>02</h2>
-            <h2 className='project-title'>Pick-a-Chew</h2>
+            <h2 onClick={() => setProject2Details(!project2Details)} className='project-title'>Pick a Chew</h2>
+          </div>
+          {project2Details &&
+            <div className='projectDetails'>
+              <ul className='project-list'>
+                <li>Total revamp of a project made during my time studying web development.</li>
+                <li>Food app that let you find receipes with the ingredients you have at home.</li>
+                <li>Mobile and desktop verson have a diffrent UI.</li>
+                <li>TECH: React, Spoonacular Api, JS, Axios, Hooks, CSS, React Router, NPM.</li>
+                <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://pick-a-chew.netlify.app/'>Pick a Chew</a></li>
+              </ul>
+            </div>
+          }
+          <div className='img-portrait'>
+            <img src={pickachew1} alt='Pickechew-home' />
+          </div>
+          <div className='number-container'>
+            <h2 className='number'>03</h2>
+            <h2 onClick={() => setProject3Details(!project3Details)} className='project-title'>Weather app</h2>
+          </div>
+          {project3Details &&
+            <div className='projectDetails'>
+              <ul className='project-list'>
+                <li>Weather app with two different UI.</li>
+                <li>App made for training purpose with Neumorphism and Glassphormism.</li>
+                <li>TECH: React, Open Weather Api, JS, Styled Components.</li>
+                <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://loving-raman-112067.netlify.app/'>Weather App</a></li>
+              </ul>
+            </div>
+          }
+          <div className='img-portrait'>
+            <img src={weather1} alt='weather-app' />
+          </div>
+          <div className='number-container'>
+            <h2 className='number'>04</h2>
+            <h2 onClick={() => setProject4Details(!project4Details)} className='project-title'>Wild Universe</h2>
+          </div>
+          {project4Details &&
+            <div className='projectDetails'>
+              <ul>
+                <li>Website about our universe.</li>
+                <li>First project ever made.</li>
+                <li>We were a team of 3.</li>
+                <li>TECH: HTML, CSS, JS</li>
+                <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://stoic-mcnulty-b4f347.netlify.app/'>Wild Universe</a></li>
+              </ul>
+            </div>
+          }
+          <div className='img-landscape'>
+            <img className='portfolio3d' src={universe} alt='planets' />
           </div>
         </section>
 
