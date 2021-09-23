@@ -12,6 +12,17 @@ function App() {
   const [project3Details, setProject3Details] = useState(false)
   const [project4Details, setProject4Details] = useState(false)
 
+//   function sendEmail(e) {
+//     e.preventDefault();
+
+//     emailjs.sendForm('service_42wcai8', 'template_pacrvr9', e.target, 'user_2GGglIWKLZaKHdfcHpWH0')
+//         .then((result) => {
+//             console.log(result.text);
+//         }, (error) => {
+//             console.log(error.text);
+//         });
+// }
+
 
   return (
     <>
@@ -40,7 +51,7 @@ function App() {
         </section>
 
         <section className='projects-section'>
-          <h1 className='projects-section-title'>Projects</h1>
+          <h1 className='section-title'>Projects</h1>
           <h3 className='projects-section-title2'>Click on the name for details</h3>
           <div className='number-container'>
             <h2 className='number'>01</h2>
@@ -48,7 +59,7 @@ function App() {
           </div>
           {project1Details &&
             <div className='projectDetails'>
-              <ul>
+              <ul className='project-list'>
                 <li>A version of my portfolio using imported 3d models.</li>
                 <li>It was a lot of fun and sweat, but a definitely a good training.</li>
                 <li>TECH: React, react router, Three JS, hooks, CSS.</li>
@@ -66,9 +77,9 @@ function App() {
           {project2Details &&
             <div className='projectDetails'>
               <ul className='project-list'>
-                <li>Total revamp of a project made during my time studying web development.</li>
-                <li>Food app that let you find receipes with the ingredients you have at home.</li>
-                <li>Mobile and desktop verson have a diffrent UI.</li>
+                <li>Total revamp of an old project.</li>
+                <li>Food app that finds receipes with the ingredients you have at home.</li>
+                <li>Diffrent UI for mobile and desktop.</li>
                 <li>TECH: React, Spoonacular Api, JS, Axios, Hooks, CSS, React Router, NPM.</li>
                 <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://pick-a-chew.netlify.app/'>Pick a Chew</a></li>
               </ul>
@@ -100,7 +111,7 @@ function App() {
           </div>
           {project4Details &&
             <div className='projectDetails'>
-              <ul>
+              <ul className='project-list'>
                 <li>Website about our universe.</li>
                 <li>First project ever made.</li>
                 <li>We were a team of 3.</li>
@@ -115,7 +126,19 @@ function App() {
         </section>
 
         <section className='contact-section'>
-
+          <h1 className='section-title'>Contact</h1>
+          <h3 className='section-title2'>Leave a message!</h3>
+          {/* <form onSubmit={sendEmail}> */}
+          
+          <form>
+                <input className='contact-name' type="text" name="_name" required placeholder='Your Name' />
+                
+                <input className='contact-email' type="email" name="_email" required placeholder='Your email' />
+                
+                <textarea rows="5" cols="30" name="message" required placeholder='Your message' />
+                
+                <input className="send-button" type="submit" value="Send" />
+            </form>
         </section>
       </main>
       <footer className='footer'>
