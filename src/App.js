@@ -1,6 +1,6 @@
 import { React, useState } from 'react';
 import './App.css';
-import portfolio3d from './images/3dport.png';
+import portfolio3d from './video/portfolio3d.mp4'
 import pickachew1 from './images/pikaMobile1.png';
 import weather1 from './images/weather1.png';
 import universe from './images/wildUniverse.png';
@@ -36,8 +36,8 @@ function App() {
       <section className='intro-section'>
         <h1 className='first-name'>
           Fabien
-        </h1><br/>
-        <h1 className='last-name'>Lallement</h1><br/>
+        </h1><br />
+        <h1 className='last-name'>Lallement</h1><br />
         <h2 className='title'>Front End Developer</h2>
         <div className='circle1'></div>
         <div className='circle2'></div>
@@ -54,7 +54,7 @@ function App() {
       </section>
 
       <section className='projects-section'>
-        <h1 className='section-title'>Projects</h1><br/>
+        <h1 className='section-title'>Projects</h1><br />
         <h3 className='section-title2'>Click on the name for details</h3>
         <div className='number-container'>
           <h2 className='number'>01</h2>
@@ -71,7 +71,21 @@ function App() {
           </div>
         }
         <div className='img-landscape'>
-          <img className='portfolio3d' src={portfolio3d} alt='Star-Wars-portfolio' />
+          <video autoPlay={true} muted={true} loop={true}
+            style={{
+              borderBottomLeftRadius:"1em",
+              borderBottomRightRadius: "1em",
+              borderTopLeftRadius:"1em",
+              borderTopRightRadius:"1em",
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              
+            }}
+          >
+            <source src={portfolio3d} type='video/mp4' />
+          </video>
+          {/* <img className='portfolio3d' src={portfolio3d} alt='Star-Wars-portfolio' /> */}
         </div>
         <div className='number-container'>
           <h2 className='number'>02</h2>
@@ -129,7 +143,7 @@ function App() {
       </section>
 
       <section className='contact-section'>
-        <h1 className='section-title'>Contact</h1><br/>
+        <h1 className='section-title'>Contact</h1><br />
         <h3 className='section-title2'>Leave a message!</h3>
         {/* <form onSubmit={sendEmail}> */}
 
