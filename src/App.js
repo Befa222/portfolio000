@@ -70,6 +70,21 @@ function App() {
             </ul>
           </div>
         }
+        {/*//////////////////// DESKTOP START ////////////////////////*/}
+
+        
+        <div className='number-container-desktop'>
+          <h1 className='number-desktop'>01</h1>
+          <h1 className='project-name-desktop'>3d Portfolio</h1>
+          <ul className='project-list-desktop'>
+              <li>A version of my portfolio using imported 3d models.</li>
+              <li>It was a lot of fun and sweat, but a definitely a good training.</li>
+              <li>TECH: React, react router, Three JS, hooks, CSS.</li>
+              <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://fabien-lallement-3d-portfolio.netlify.app/'>3d Portfolio</a> </li>
+            </ul>
+        </div>
+        {/*//////////////////// DESKTOP END////////////////////////*/}
+        
         <div className='img-landscape'>
           <video autoPlay={true} muted={true} loop={true}
             style={{
@@ -85,7 +100,7 @@ function App() {
           >
             <source src={portfolio3d} type='video/mp4' />
           </video>
-          {/* <img className='portfolio3d' src={portfolio3d} alt='Star-Wars-portfolio' /> */}
+        
         </div>
         <div className='number-container'>
           <h2 className='number'>02</h2>
@@ -102,6 +117,22 @@ function App() {
             </ul>
           </div>
         }
+        {/*//////////////////// DESKTOP START ////////////////////////*/}
+
+        
+        <div className='number-container-desktop'>
+          <h1 className='number-desktop'>02</h1>
+          <h1 className='project-name-desktop'>Pick a Chew</h1>
+          <ul className='project-list-desktop'>
+          <li>Total revamp of an old project.</li>
+              <li>Food app that finds receipes with the ingredients you have at home.</li>
+              <li>Diffrent UI for mobile and desktop.</li>
+              <li>TECH: React, Spoonacular Api, JS, Axios, Hooks, CSS, React Router, NPM.</li>
+              <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://pick-a-chew.netlify.app/'>Pick a Chew</a></li>
+            </ul>
+        </div>
+        {/*//////////////////// DESKTOP END////////////////////////*/}
+
         <div className='img-portrait'>
           <img src={pickachew1} alt='Pickechew-home' />
         </div>
@@ -119,6 +150,22 @@ function App() {
             </ul>
           </div>
         }
+         {/*//////////////////// DESKTOP START ////////////////////////*/}
+
+         
+        <div className='number-container-desktop'>
+          <h1 className='number-desktop'>03</h1>
+          <h1 className='project-name-desktop'>Weather App</h1>
+          <ul className='project-list-desktop'>
+          <li>Weather app with two different UI.</li>
+              <li>App made for training purpose with Neumorphism and Glassphormism.</li>
+              <li>TECH: React, Open Weather Api, JS, Styled Components.</li>
+              <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://loving-raman-112067.netlify.app/'>Weather App</a></li>
+            </ul>
+        </div>
+
+        {/*//////////////////// DESKTOP END////////////////////////*/}
+
         <div className='img-portrait'>
           <img src={weather1} alt='weather-app' />
         </div>
@@ -137,8 +184,23 @@ function App() {
             </ul>
           </div>
         }
+         {/*//////////////////// DESKTOP START ////////////////////////*/}
+
+         
+        <div className='number-container-desktop'>
+          <h1 className='number-desktop'>04</h1>
+          <h1 className='project-name-desktop'>Wild Universe</h1>
+          <ul className='project-list-desktop'>
+          <li>Website about our universe.</li>
+              <li>First project ever made.</li>
+              <li>We were a team of 3.</li>
+              <li>TECH: HTML, CSS, JS</li>
+              <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://stoic-mcnulty-b4f347.netlify.app/'>Wild Universe</a></li>
+            </ul>
+        </div>
+        {/*//////////////////// DESKTOP END////////////////////////*/}
         <div className='img-landscape'>
-          <img className='portfolio3d' src={universe} alt='planets' />
+          <img className='img-universe' src={universe} alt='planets' />
         </div>
       </section>
 
@@ -162,8 +224,9 @@ function App() {
       <footer className='footer'>
         <div className='links-container'>
           <h1 className='links'>LINKS</h1>
-          <img src={gitHubIcon} alt='gitHub-squid' />
           <img src={linkedinIcon} alt='logo' />
+          <img src={gitHubIcon} alt='gitHub-squid' />
+          
         </div>
       </footer>
     </>

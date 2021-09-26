@@ -64,8 +64,6 @@
 .about-me-container {
     position: relative;
     top: 15vw;
-    width: 100%;
-    height: 80%;
     padding: 10%;
     font-size: clamp(1.2rem, 3vw, 3rem);
     font-style: italic;
@@ -104,7 +102,8 @@
 }
 
 .section-title2 {
-    color: var(--clr-BG-light)
+    color: var(--clr-BG-light);
+    font-size: clamp(1rem, 1.5vw, 1.7rem);
 }
 
 .number-container {
@@ -131,10 +130,6 @@
     position: relative;
     width: 100%;
     z-index: 2;
-}
-
-.portfolio3d {
-    border-radius: 1em;
 }
 
 .img-portrait {
@@ -188,9 +183,9 @@ textarea {
 
 .send-button {
     width: 35%;
-    padding: 3%;
+    padding: 1%;
     font-family: Montserrat-Reg;
-    font-size: 2rem;
+    font-size: 4vw;
     text-align: center;
     background: none;
     border: 0.1em solid var(--clr-BG-light);
@@ -205,7 +200,7 @@ textarea {
     position: absolute;
     font-size: 30vw;
     text-align: center;
-    opacity: 0.15;
+    opacity: 0.5;
     z-index: -1;
 }
 .links-container{
@@ -216,6 +211,136 @@ textarea {
     width:100%;
     height: auto;
 }
+.project-name-desktop{
+    display: none;
+}
+
+.number-container-desktop{
+    display: none;
+}
+
+/* ////////////////////////// LANDSCAPE ////////////////////////////*/
+
+@media all and (orientation: landscape) {
+
+    .first-name, .last-name {
+        font-size: 7vw;
+    }
+    .title {
+        font-size: 4vw;
+    }
+    
+    .circle1 {
+        top: 75%;
+        left: 92.5%;
+        width: 30vw;
+        height: 15vw;
+    }
+    
+    .circle2 {
+        position: absolute;
+        top: 75%;
+        left: 96%;
+        width: 15vw;
+        height: 7.5vw;
+    }
+    .about-me-container {
+        font-size: 2vw;
+    }
+    .projects-section {
+        position: relative;
+        top: 40vh;
+    }
+    .section-title{
+        position: relative;
+        top: 15vh;
+    }
+    .section-title2{
+        display: none;
+    }
+    .number-container {
+       display: none;
+    }
+    .project-name-desktop{
+        position: relative;
+        display: block;
+        top: 13vh;
+        text-align: center;
+        text-decoration: underline;
+        text-decoration-color: var(--clr-accents);
+        color: var(--clr-BG-light);
+        font-size: 4vw;
+    }
+    .img-landscape {
+        top: -27vh;
+        left: 50%;
+        width: 50%;
+    }
+    .img-universe{
+        width: 100%;
+    }
+    .number-container-desktop{
+        display:flex;
+        flex-direction: column;
+        position: relative;
+        top: 19vh;
+        width: 48%;
+        height: 60vh;
+    }
+    
+    .number-desktop{
+        position: absolute;
+        left: -15%;
+        font-size: 35vw;
+        z-index: -1;
+        opacity: 0.5;
+    }
+    .project-list-desktop{
+        position: relative;
+        top: 10vh;
+        color: var(--clr-BG-light);
+        font-size: clamp(0.8rem, 2vw, 2rem);
+    }
+    .img-portrait{
+        top: -25vh;
+        left: 70%;
+        width: 13%;
+    }
+    form{
+        position: relative;
+        top: 15vh;
+        height: 150vh;
+    }
+    .send-button{
+        width: 20vw;
+    }
+    .footer{
+        top: 60vh;
+    }
+    
+}
+
+/*///////////////////////////  BIG SCREENS ///////////////////////////////////*/
+
+@media all and (orientation: landscape) and (min-width: 901px){
+    .circle1 {
+        top: 65%;
+        left: 88%;
+        width: 50vw;
+        height: 25vw;
+        border-radius: 40em 40em 0 0;
+    }
+    
+    .circle2 {
+        top: 65%;
+        left: 94%;
+        width: 25vw;
+        height: 12.5vw;
+        border-radius: 25em 25em 0 0;
+
+    }
+}
+
 
 /*/////////////////////////////////// KEYFRAMES ////////////////////////////////*/
 
