@@ -4,7 +4,7 @@
 
 :root {
   --clr-BG-dark: rgb(39, 39, 39);
-  --clr-BG-light: silver;
+  --clr-text: silver;
   --clr-accents: rgb(218, 141, 0);
 }
 
@@ -17,11 +17,34 @@ body {
   background-color: var(--clr-BG-dark);
 }
 
+* {
+  /*FIREFOX */
+  scrollbar-color: var(--clr-accents) var(--clr-BG-dark);
+  scrollbar-width: thin
+}
+
+body::-webkit-scrollbar {
+  /*CHROME/OS/SAFARI */
+  width: 0.6rem;
+}
+
+body::-webkit-scrollbar-track {
+  /*CHROME/OS/SAFARI */
+  background: var(--clr-BG-dark);
+}
+
+body::-webkit-scrollbar-thumb {
+  /*CHROME/OS/SAFARI */
+  background-color: var(--clr-accents);
+  border-radius: 20px;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
 }
-li{
+
+li {
   padding-top: 0.7em;
   text-align: start;
 }
@@ -31,9 +54,11 @@ h1, h2, h3, h4, a {
   padding: 0;
   display: inline-block;
 }
-a{
+
+a {
   color: var(--clr-accents)
 }
+
 img {
   max-width: 100%;
   height: auto;

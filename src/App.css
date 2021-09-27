@@ -28,7 +28,7 @@
     position: relative;
     top: 21%;
     left: -80%;
-    color: var(--clr-BG-light);
+    color: var(--clr-text);
     font-size: clamp(1rem, 6vw, 5rem);
     font-style: italic;
     animation: titleSlide 1s ease forwards;
@@ -56,14 +56,18 @@
     height: 25vw;
     transform: translate(-50%, -50%) rotate(-90deg);
     border-radius: 15em 15em 0 0;
-    border: 0.3em solid var(--clr-BG-light);
+    border: 0.3em solid var(--clr-text);
     border-bottom: none;
     z-index: -1;
 }
 
+.about-me-section {
+    position: relative;
+    top: 10vh;
+}
+
 .about-me-container {
     position: relative;
-    top: 15vw;
     padding: 10%;
     font-size: clamp(1.2rem, 3vw, 3rem);
     font-style: italic;
@@ -88,7 +92,7 @@
 }
 
 .about-me-text {
-    color: var(--clr-BG-light)
+    color: var(--clr-text)
 }
 
 .projects-section {
@@ -96,19 +100,18 @@
     top: 15vh;
 }
 
-.section-title {
+.section-title, .projects-section-title {
     font-size: clamp(2rem, 3vw, 3.5rem);
     color: var(--clr-accents)
 }
 
 .section-title2 {
-    color: var(--clr-BG-light);
+    color: var(--clr-text);
     font-size: clamp(1rem, 1.5vw, 1.7rem);
 }
 
 .number-container {
     position: relative;
-    top: 3vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -123,13 +126,12 @@
 }
 
 .project-title {
-    color: var(--clr-BG-light);
+    color: var(--clr-text);
 }
 
 .img-landscape {
     position: relative;
     width: 100%;
-    z-index: 2;
 }
 
 .img-portrait {
@@ -140,7 +142,7 @@
 }
 
 .projectDetails {
-    color: var(--clr-BG-light);
+    color: var(--clr-text);
     height: 32vh;
     animation: smoothSlide 1s ease;
 }
@@ -157,7 +159,6 @@
     top: 25vh;
 }
 
-
 form {
     display: flex;
     flex-direction: column;
@@ -170,11 +171,14 @@ form {
     background: transparent;
     border: none;
     border-bottom: 0.2em solid var(--clr-accents);
-    color: var(--clr-BG-light);
+    color: var(--clr-text);
     outline: none;
 }
 
 textarea {
+    width: 50%;
+    height: 20%;
+    color: var(--clr-text);
     background: transparent;
     border: 0.2em solid var(--clr-accents);
     outline: none;
@@ -185,58 +189,59 @@ textarea {
     width: 35%;
     padding: 1%;
     font-family: Montserrat-Reg;
-    font-size: 4vw;
+    font-size: 5vw;
     text-align: center;
     background: none;
-    border: 0.1em solid var(--clr-BG-light);
+    border: 0.1em solid var(--clr-text);
     border-radius: 0.5em;
     color: var(--clr-accents)
 }
-.footer{
+
+.footer {
     position: relative;
     top: 35vh;
 }
-.links{
+
+.links {
     position: absolute;
     font-size: 30vw;
     text-align: center;
     opacity: 0.5;
     z-index: -1;
 }
-.links-container{
+
+.links-container {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    width:100%;
+    width: 100%;
     height: auto;
 }
-.project-name-desktop{
+
+.project-name-desktop {
     display: none;
 }
 
-.number-container-desktop{
+.number-container-desktop {
     display: none;
 }
 
 /* ////////////////////////// LANDSCAPE ////////////////////////////*/
 
 @media all and (orientation: landscape) {
-
     .first-name, .last-name {
         font-size: 7vw;
     }
     .title {
         font-size: 4vw;
     }
-    
     .circle1 {
         top: 75%;
         left: 92.5%;
         width: 30vw;
         height: 15vw;
     }
-    
     .circle2 {
         position: absolute;
         top: 75%;
@@ -247,82 +252,155 @@ textarea {
     .about-me-container {
         font-size: 2vw;
     }
+    .about-me-section::after {
+        content: 'About';
+        position: absolute;
+        top: 13%;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25vw;
+        font-weight: 900;
+        opacity: 0.5;
+        z-index: -1;
+    }
     .projects-section {
         position: relative;
-        top: 40vh;
+        top: 50vh;
     }
-    .section-title{
+    .project00{
         position: relative;
-        top: 15vh;
     }
-    .section-title2{
+    .project00::before {
+        content:'project';
+        position: absolute;
+        top: -30vh;
+        left: 18%;
+        font-size: 18vw;
+        font-weight: 900;
+        color: black;
+        text-transform: uppercase;
+        z-index: -1;
+        opacity: 0.5;
+    }
+    .section-title {
+        display: none;
+    }
+    .section-title2 {
         display: none;
     }
     .number-container {
-       display: none;
+        display: none;
     }
-    .project-name-desktop{
+    .project-name-desktop {
         position: relative;
         display: block;
         top: 13vh;
         text-align: center;
         text-decoration: underline;
         text-decoration-color: var(--clr-accents);
-        color: var(--clr-BG-light);
+        color: var(--clr-text);
         font-size: 4vw;
     }
     .img-landscape {
-        top: -27vh;
+        top: -45vh;
         left: 50%;
         width: 50%;
     }
-    .img-universe{
+    .img-universe {
         width: 100%;
     }
-    .number-container-desktop{
-        display:flex;
+    .number-container-desktop {
+        display: flex;
         flex-direction: column;
         position: relative;
-        top: 19vh;
         width: 48%;
         height: 60vh;
     }
-    
-    .number-desktop{
+    .number-desktop {
         position: absolute;
-        left: -15%;
-        font-size: 35vw;
+        left: -25%;
+        font-size: 36vw;
         z-index: -1;
         opacity: 0.5;
     }
-    .project-list-desktop{
+    .project-list-desktop {
         position: relative;
         top: 10vh;
-        color: var(--clr-BG-light);
+        color: var(--clr-text);
         font-size: clamp(0.8rem, 2vw, 2rem);
     }
-    .img-portrait{
-        top: -25vh;
+    .img-portrait {
+        top: -45vh;
         left: 70%;
         width: 13%;
     }
-    form{
+    .contact-section {
+        top: 50vh;
+    }
+    form {
         position: relative;
         top: 15vh;
-        height: 150vh;
+        height: 90vh;
     }
-    .send-button{
-        width: 20vw;
+    textarea {
+        position: relative;
+        top: -10%;
+        left: -20%;
+        width: 30%;
+        height: 60%;
     }
-    .footer{
-        top: 60vh;
+    .contact-name {
+        position: relative;
+        left: 20%;
+        top: 35%;
     }
-    
+    .contact-email {
+        position: relative;
+        left: 20%;
+        top: 45%;
+    }
+    .send-button {
+        position: relative;
+        top: -15%;
+        left: 20%;
+        width: 10vw;
+        font-size: 2vw;
+    }
+    .footer {
+        top: 95vh;
+    }
+    .postcard {
+        position: absolute;
+        top: 20vh;
+        left: 10%;
+        width: 80%;
+        height: 90vh;
+        border: 2vw solid black;
+        opacity: 0.5;
+    }
+    .stamp {
+        position: absolute;
+        top: 10%;
+        left: 85%;
+        width: 10%;
+        height: 25%;
+        border: 0.5vw solid black;
+        opacity: 0.5;
+    }
+    .middleLine {
+        position: absolute;
+        top: 10%;
+        left: 49.5%;
+        height: 80%;
+        width: 1%;
+        background-color: black;
+        opacity: 0.5;
+    }
 }
 
 /*///////////////////////////  BIG SCREENS ///////////////////////////////////*/
 
-@media all and (orientation: landscape) and (min-width: 901px){
+@media all and (orientation: landscape) and (min-width: 901px) {
     .circle1 {
         top: 65%;
         left: 88%;
@@ -330,17 +408,45 @@ textarea {
         height: 25vw;
         border-radius: 40em 40em 0 0;
     }
-    
     .circle2 {
         top: 65%;
         left: 94%;
         width: 25vw;
         height: 12.5vw;
         border-radius: 25em 25em 0 0;
-
+    }
+    .section-title {
+        display: none;
+    }
+    textarea {
+        width: 30%;
+        height: 50%;
+        top: -5%;
+        font-size: 1.5vw;
+        margin: 0;
+        color: var(--clr-text);
+    }
+    .contact-name {
+        top: 40%;
+        width: 30%;
+        font-size: 2vw;
+    }
+    .contact-email {
+        top: 50%;
+        width: 30%;
+        font-size: 2vw;
+    }
+    .send-button {
+        position: relative;
+        top: -5%;
+        left: 20%;
+        width: 10vw;
+        font-size: 2vw;
+    }
+    .footer {
+        top: 110vh;
     }
 }
-
 
 /*/////////////////////////////////// KEYFRAMES ////////////////////////////////*/
 
