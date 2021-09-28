@@ -1,3 +1,61 @@
+header {
+    position: relative;
+    height: 7vh;
+}
+.logo{
+    font-size: clamp(2rem, 4vw, 5rem)
+}
+.burgerMenu {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    width: 10vw;
+    height: 10vw;
+}
+
+.burger1, .burger2, .burger3 {
+    position: relative;
+    width: 100%;
+    height: 15%;
+    background-color: var(--clr-accents);
+    z-index: 3;
+}
+
+.burger1 {
+    top: 0%;
+}
+
+.burger2 {
+    top: 15%;
+    border-radius: 0.3em;
+}
+
+.burger3 {
+    top: 30%;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    left: 110%;
+    width: calc(100% + 0.5em);
+    height: 97vh;
+    font-size: 8vw;
+    background-color: var(--clr-BG-dark);
+    z-index: 2;
+    animation: navBarSlide 1s ease forwards;
+}
+.menu-item{
+    color: var(--clr-text);
+    text-decoration: none;
+}
+.menu-item-desktop{
+    display: none;
+}
 .intro-section {
     height: 85vh;
 }
@@ -61,7 +119,7 @@
     z-index: -1;
 }
 
-.about-me-section {
+#about-me-section {
     position: relative;
     top: 10vh;
 }
@@ -95,7 +153,7 @@
     color: var(--clr-text)
 }
 
-.projects-section {
+#projects-section {
     position: relative;
     top: 15vh;
 }
@@ -153,7 +211,7 @@
     font-size: clamp(0.9rem, 4.5vw, 4rem);
 }
 
-.contact-section {
+#contact-section {
     width: 100%;
     position: relative;
     top: 25vh;
@@ -194,10 +252,46 @@ textarea {
     background: none;
     border: 0.1em solid var(--clr-text);
     border-radius: 0.5em;
-    color: var(--clr-accents)
+    color: var(--clr-accents);
+    cursor: pointer;
 }
 
-.footer {
+.email-popup {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    height: 50vh;
+    font-size: clamp(1rem, 5vw, 3rem);
+    border: 0.3em solid var(--clr-accents);
+    border-radius: 2em;
+    color: var(--clr-text);
+    background-color: var(--clr-BG-dark);
+}
+
+.popup-button {
+    position: relative;
+    top: 10%;
+    left: 25%;
+    width: 50%;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: clamp(1rem, 5vw, 3rem);
+    text-transform: uppercase;
+    background: transparent;
+    border: 0.15em solid var(--clr-text);
+    border-radius: 0.5em;
+    color: var(--clr-accents);
+    font-family: Montserrat-Reg;
+    cursor: pointer;
+}
+
+#footer {
     position: relative;
     top: 35vh;
 }
@@ -219,6 +313,10 @@ textarea {
     height: auto;
 }
 
+.linkedinIcon, .githubIcon {
+    transform: scale(0.8);
+}
+
 .project-name-desktop {
     display: none;
 }
@@ -230,6 +328,32 @@ textarea {
 /* ////////////////////////// LANDSCAPE ////////////////////////////*/
 
 @media all and (orientation: landscape) {
+    .burgerMenu{
+        display: none;
+    }
+    .desktop-navbar{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-around;
+        position: absolute;
+        top: -0.5em;
+        left: 60%;
+        width: calc(40% + 0.5em);
+        height: 10vh;
+        background-color: rgb(112, 112, 112);
+        border-radius: 0 0 0 5em;
+    }
+    .desktop-menu-list li{
+        display: inline;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        font-size: clamp(1rem, 2vw, 5rem);
+    }
+    .menu-item-desktop{
+        display: contents;
+        text-decoration: none;
+    }
     .first-name, .last-name {
         font-size: 7vw;
     }
@@ -252,7 +376,7 @@ textarea {
     .about-me-container {
         font-size: 2vw;
     }
-    .about-me-section::after {
+    #about-me-section::after {
         content: 'About';
         position: absolute;
         top: 13%;
@@ -263,15 +387,15 @@ textarea {
         opacity: 0.5;
         z-index: -1;
     }
-    .projects-section {
+    #projects-section {
         position: relative;
         top: 50vh;
     }
-    .project00{
+    .project00 {
         position: relative;
     }
     .project00::before {
-        content:'project';
+        content: 'project';
         position: absolute;
         top: -30vh;
         left: 18%;
@@ -334,8 +458,8 @@ textarea {
         left: 70%;
         width: 13%;
     }
-    .contact-section {
-        top: 50vh;
+    #contact-section {
+        top: 30vh;
     }
     form {
         position: relative;
@@ -366,7 +490,7 @@ textarea {
         width: 10vw;
         font-size: 2vw;
     }
-    .footer {
+    #footer {
         top: 95vh;
     }
     .postcard {
@@ -415,6 +539,29 @@ textarea {
         height: 12.5vw;
         border-radius: 25em 25em 0 0;
     }
+    .deploy-link {
+        text-decoration: none;
+        color: var(--clr-text);
+        font-weight: 600;
+        position: relative;
+    }
+    .deploy-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 100%;
+        height: 40%;
+        background-color: var(--clr-accents);
+        z-index: -1;
+    }
+    .deploy-link:hover, .deploy-link:hover::after {
+        color: black;
+        left: 0;
+        height: 100%;
+        border-radius: 0.2em;
+        transition-duration: 0.5s;
+    }
     .section-title {
         display: none;
     }
@@ -443,12 +590,32 @@ textarea {
         width: 10vw;
         font-size: 2vw;
     }
-    .footer {
-        top: 110vh;
+    .send-button:hover {
+        transform: scale(1.1);
+        transition-duration: 0.5s;
+    }
+    .githubIcon, .linkedinIcon {
+        transform: scale(1.5);
+    }
+    .githubIcon:hover, .linkedinIcon:hover {
+        transform: scale(1.7);
+        transition-duration: 0.4s;
+    }
+    #footer {
+        top: 90vh;
     }
 }
 
 /*/////////////////////////////////// KEYFRAMES ////////////////////////////////*/
+
+@keyframes navBarSlide {
+    0% {
+        left: 110%
+    }
+    100% {
+        left: 0%
+    }
+}
 
 @keyframes titleSlide {
     0% {

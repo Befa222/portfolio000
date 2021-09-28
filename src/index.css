@@ -56,7 +56,7 @@ h1, h2, h3, h4, a {
 }
 
 a {
-  color: var(--clr-accents)
+  color: var(--clr-accents);
 }
 
 img {
