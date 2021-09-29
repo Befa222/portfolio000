@@ -52,7 +52,7 @@ function App() {
         <article className='about-me-container'>
           <p className='about-me-text'>Hi there! My name is Fabien, I'm French and I've been living in London for 12 years.
           I've started my journey as a Web Dev a year ago after losing my job, as bar manager, due to Covid.</p>
-          <p className='about-me-text'>Since then, I've been focused on the Front End part of the job as I fell in love with React and CSS. I also started to learn Three JS, as I found the idea of bringing 3d into a website amazing. It was a good JavaScript training, on which I am concentrating at the moment.</p>
+          <p className='about-me-text'>Since then, I've been focused on the Front End part of the job as I fell in love with React and CSS. I also started to learn Three JS and I find the idea of bringing 3D into a website amazing. This has been a good JavaScript training for me, which is my focus at the moment.</p>
         </article>
       </section>
 
@@ -69,7 +69,7 @@ function App() {
             <div className='projectDetails'>
               <ul className='project-list'>
                 <li>A version of my portfolio using imported 3d models.</li>
-                <li>It was a lot of fun and sweat, but a definitely a good training.</li>
+                <li>It was a lot of fun and sweat, but definitely a huge learning experience.</li>
                 <li>TECH: React, react router, Three JS, hooks, CSS.</li>
                 <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://fabien-lallement-3d-portfolio.netlify.app/'>3d Portfolio</a> </li>
               </ul>
@@ -81,7 +81,7 @@ function App() {
             <h1 className='project-name-desktop'>3d Portfolio</h1>
             <ul className='project-list-desktop'>
               <li>A version of my portfolio using imported 3d models.</li>
-              <li>It was a lot of fun and sweat, but a definitely a good training.</li>
+              <li>It was a lot of fun and sweat, but definitely a huge learning experience.</li>
               <li>TECH: React, react router, Three JS, hooks, CSS.</li>
               <li>DEPLOY LINK: <a className='deploy-link' target='_blank' rel="noreferrer" href='https://fabien-lallement-3d-portfolio.netlify.app/'>3d Portfolio</a> </li>
             </ul>
@@ -148,7 +148,7 @@ function App() {
             <div className='projectDetails'>
               <ul className='project-list'>
                 <li>Weather app with two different UI.</li>
-                <li>App made for training purpose with Neumorphism and Glassphormism.</li>
+                <li>App made for training purposes with Neumorphism and Glassphormism.</li>
                 <li>TECH: React, Open Weather Api, JS, Styled Components.</li>
                 <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://loving-raman-112067.netlify.app/'>Weather App</a></li>
               </ul>
@@ -160,7 +160,7 @@ function App() {
             <h1 className='project-name-desktop'>Weather App</h1>
             <ul className='project-list-desktop'>
               <li>Weather app with two different UI.</li>
-              <li>App made for training purpose with Neumorphism and Glassphormism.</li>
+              <li>App made for training purposes with Neumorphism and Glassphormism.</li>
               <li>TECH: React, Open Weather Api, JS, Styled Components.</li>
               <li>DEPLOY LINK: <a className='deploy-link' target='_blank' rel="noreferrer" href='https://loving-raman-112067.netlify.app/'>Weather App</a></li>
             </ul>
