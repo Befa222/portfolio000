@@ -29,13 +29,21 @@ function App() {
         console.log(error.text);
       });
   }
+  function virtualKeyboardTrue() {
+    let viewport = document.querySelector("meta[name=viewport]");
+    viewport.setAttribute("content", viewport.content + ", height=" + window.innerHeight)
+  }
 
+  function virtualKeyboardFalse() {
+    let viewport = document.querySelector("meta[name=viewport]");
+    viewport.setAttribute('content', viewport.content = "width=device-width, initial-scale=1, user-scalable=0")
+  }
 
   return (
     <>
       <header className='header'>
         <h1 className='logo'>FL</h1>
-        <Navbar/>
+        <Navbar />
       </header>
 
       <section className='intro-section'>
@@ -51,7 +59,7 @@ function App() {
       <section id='about-me-section'>
         <article className='about-me-container'>
           <p className='about-me-text'>Hi there! My name is Fabien, I'm French and I've been living in London for 12 years.
-          I've started my journey as a Web Dev a year ago after losing my job, as bar manager, due to Covid.</p>
+            I've started my journey as a Web Dev a year ago after losing my job, as bar manager, due to Covid.</p>
           <p className='about-me-text'>Since then, I've been focused on the Front End part of the job as I fell in love with React and CSS. I also started to learn Three JS and I find the idea of bringing 3D into a website amazing. This has been a good JavaScript training for me, which is my focus at the moment.</p>
         </article>
       </section>
@@ -206,7 +214,7 @@ function App() {
         </article>
       </section>
 
-      <section id='contact-section'>
+      <section onFocus={virtualKeyboardTrue} onBlur={virtualKeyboardFalse} id='contact-section'>
         <h1 className='section-title'>Contact</h1><br />
         <h3 className='section-title2'>Leave a message!</h3>
         <Postcard />
