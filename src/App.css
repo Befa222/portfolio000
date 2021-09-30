@@ -2,9 +2,11 @@ header {
     position: relative;
     height: 7vh;
 }
-.logo{
+
+.logo {
     font-size: clamp(2rem, 4vw, 5rem)
 }
+
 .burgerMenu {
     position: absolute;
     top: 0.5em;
@@ -49,13 +51,16 @@ header {
     z-index: 2;
     animation: navBarSlide 1s ease forwards;
 }
-.menu-item{
+
+.menu-item {
     color: var(--clr-text);
     text-decoration: none;
 }
-.menu-item-desktop{
+
+.menu-item-desktop {
     display: none;
 }
+
 .intro-section {
     height: 85vh;
 }
@@ -328,10 +333,10 @@ textarea {
 /* ////////////////////////// LANDSCAPE ////////////////////////////*/
 
 @media all and (orientation: landscape) {
-    .burgerMenu{
+    .burgerMenu {
         display: none;
     }
-    .desktop-navbar{
+    .desktop-navbar {
         display: flex;
         align-items: center;
         flex-direction: row;
@@ -344,13 +349,13 @@ textarea {
         background-color: rgb(112, 112, 112);
         border-radius: 0 0 0 5em;
     }
-    .desktop-menu-list li{
+    .desktop-menu-list li {
         display: inline;
         margin-right: 1vw;
         margin-left: 1vw;
-        font-size: clamp(1rem, 2vw, 5rem);
+        font-size: clamp(0.8rem, 2vw, 5rem);
     }
-    .menu-item-desktop{
+    .menu-item-desktop {
         display: contents;
         text-decoration: none;
     }
