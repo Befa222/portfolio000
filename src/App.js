@@ -4,7 +4,7 @@ import { Navbar } from './components/Navbar';
 import portfolio3d from './video/portfolio3d.mp4'
 import pickachew1 from './images/pikaMobile1.png';
 import weather1 from './images/weather1.png';
-import universe from './images/wildUniverse.png';
+import game from './images/gameMain.png';
 import linkedinIcon from './images/linkedin-64.ico';
 import gitHubIcon from './images/gitHub.png';
 import emailjs from 'emailjs-com';
@@ -71,45 +71,34 @@ function App() {
         <article className='project00'>
           <div className='number-container'>
             <h2 className='number'>01</h2>
-            <h2 onClick={() => setProject1Details(!project1Details)} className='project-title'>3d Portfolio</h2>
+            <h2 onClick={() => setProject4Details(!project4Details)} className='project-title'>Memory Game</h2>
           </div>
-          {project1Details &&
+          {project4Details &&
             <div className='projectDetails'>
               <ul className='project-list'>
-                <li>A version of my portfolio using imported 3d models.</li>
-                <li>It was a lot of fun and sweat, but definitely a huge learning experience.</li>
-                <li>TECH: React, react router, Three JS, hooks, CSS.</li>
-                <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://fabien-lallement-3d-portfolio.netlify.app/'>3d Portfolio</a> </li>
+                <li>Find the matching pairs!</li>
+                <li>Sign in, log in, save your best time.</li>
+                <li>Leaderboard.</li>
+                <li>TECH: HTML, CSS, JS, Firebase, React, Context, Hooks, React Router.</li>
+                <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://memory-game-fabien-lallement.netlify.app/'>Memory Game</a></li>
               </ul>
             </div>
           }
           {/*//////////////////// DESKTOP START ////////////////////////*/}
           <div className='number-container-desktop'>
             <h1 className='number-desktop'>01</h1>
-            <h1 className='project-name-desktop'>3d Portfolio</h1>
+            <h1 className='project-name-desktop'>Memory game</h1>
             <ul className='project-list-desktop'>
-              <li>A version of my portfolio using imported 3d models.</li>
-              <li>It was a lot of fun and sweat, but definitely a huge learning experience.</li>
-              <li>TECH: React, react router, Three JS, hooks, CSS.</li>
-              <li>DEPLOY LINK: <a className='deploy-link' target='_blank' rel="noreferrer" href='https://fabien-lallement-3d-portfolio.netlify.app/'>3d Portfolio</a> </li>
+              <li>Find the matching pairs!</li>
+              <li>Sign in, log in, save your best time.</li>
+              <li>Leaderboard.</li>
+              <li>TECH: HTML, CSS, JS, Firebase, React, Context</li>
+              <li>DEPLOY LINK: <a className='deploy-link' target='_blank' rel="noreferrer" href='https://memory-game-fabien-lallement.netlify.app/'>Memory Game</a></li>
             </ul>
           </div>
           {/*//////////////////// DESKTOP END////////////////////////*/}
           <div className='img-landscape'>
-            <video autoPlay={true} muted={true} loop={true}
-              style={{
-                borderBottomLeftRadius: "1em",
-                borderBottomRightRadius: "1em",
-                borderTopLeftRadius: "1em",
-                borderTopRightRadius: "1em",
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-
-              }}
-            >
-              <source src={portfolio3d} type='video/mp4' />
-            </video>
+            <img className='img-universe' src={game} alt='planets' />
           </div>
         </article>
 
@@ -150,6 +139,51 @@ function App() {
         <article className='project00'>
           <div className='number-container'>
             <h2 className='number'>03</h2>
+            <h2 onClick={() => setProject1Details(!project1Details)} className='project-title'>3d Portfolio</h2>
+          </div>
+          {project1Details &&
+            <div className='projectDetails'>
+              <ul className='project-list'>
+                <li>A version of my portfolio using imported 3d models.</li>
+                <li>It was a lot of fun and sweat, but definitely a huge learning experience.</li>
+                <li>TECH: React, react router, Three JS, hooks, CSS.</li>
+                <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://fabien-lallement-3d-portfolio.netlify.app/'>3d Portfolio</a> </li>
+              </ul>
+            </div>
+          }
+          {/*//////////////////// DESKTOP START ////////////////////////*/}
+          <div className='number-container-desktop'>
+            <h1 className='number-desktop'>03</h1>
+            <h1 className='project-name-desktop'>3d Portfolio</h1>
+            <ul className='project-list-desktop'>
+              <li>A version of my portfolio using imported 3d models.</li>
+              <li>It was a lot of fun and sweat, but definitely a huge learning experience.</li>
+              <li>TECH: React, react router, Three JS, hooks, CSS.</li>
+              <li>DEPLOY LINK: <a className='deploy-link' target='_blank' rel="noreferrer" href='https://fabien-lallement-3d-portfolio.netlify.app/'>3d Portfolio</a> </li>
+            </ul>
+          </div>
+          {/*//////////////////// DESKTOP END////////////////////////*/}
+          <div className='img-landscape'>
+            <video autoPlay={true} muted={true} loop={true}
+              style={{
+                borderBottomLeftRadius: "1em",
+                borderBottomRightRadius: "1em",
+                borderTopLeftRadius: "1em",
+                borderTopRightRadius: "1em",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+
+              }}
+            >
+              <source src={portfolio3d} type='video/mp4' />
+            </video>
+          </div>
+        </article>
+
+        <article className='project00'>
+          <div className='number-container'>
+            <h2 className='number'>04</h2>
             <h2 onClick={() => setProject3Details(!project3Details)} className='project-title'>Weather app</h2>
           </div>
           {project3Details &&
@@ -164,7 +198,7 @@ function App() {
           }
           {/*//////////////////// DESKTOP START ////////////////////////*/}
           <div className='number-container-desktop'>
-            <h1 className='number-desktop'>03</h1>
+            <h1 className='number-desktop'>04</h1>
             <h1 className='project-name-desktop'>Weather App</h1>
             <ul className='project-list-desktop'>
               <li>Weather app with two different UI.</li>
@@ -179,39 +213,7 @@ function App() {
           </div>
         </article>
 
-        <article className='project00'>
-          <div className='number-container'>
-            <h2 className='number'>04</h2>
-            <h2 onClick={() => setProject4Details(!project4Details)} className='project-title'>Wild Universe</h2>
-          </div>
-          {project4Details &&
-            <div className='projectDetails'>
-              <ul className='project-list'>
-                <li>Website about our universe.</li>
-                <li>First project ever made.</li>
-                <li>We were a team of 3.</li>
-                <li>TECH: HTML, CSS, JS</li>
-                <li>DEPLOY LINK: <a target='_blank' rel="noreferrer" href='https://stoic-mcnulty-b4f347.netlify.app/'>Wild Universe</a></li>
-              </ul>
-            </div>
-          }
-          {/*//////////////////// DESKTOP START ////////////////////////*/}
-          <div className='number-container-desktop'>
-            <h1 className='number-desktop'>04</h1>
-            <h1 className='project-name-desktop'>Wild Universe</h1>
-            <ul className='project-list-desktop'>
-              <li>Website about our universe.</li>
-              <li>First project ever made.</li>
-              <li>We were a team of 3.</li>
-              <li>TECH: HTML, CSS, JS</li>
-              <li>DEPLOY LINK: <a className='deploy-link' target='_blank' rel="noreferrer" href='https://stoic-mcnulty-b4f347.netlify.app/'>Wild Universe</a></li>
-            </ul>
-          </div>
-          {/*//////////////////// DESKTOP END////////////////////////*/}
-          <div className='img-landscape'>
-            <img className='img-universe' src={universe} alt='planets' />
-          </div>
-        </article>
+        
       </section>
 
       <section onFocus={virtualKeyboardTrue} onBlur={virtualKeyboardFalse} id='contact-section'>
